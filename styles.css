@@ -1,0 +1,131 @@
+/* Brown/Beige theme for popup */
+:root {
+  --kw-bg: #f5efe6;       /* beige */
+  --kw-panel: #f3e9dc;    /* light sand */
+  --kw-text: #3e2f23;     /* dark brown */
+  --kw-muted: #8b6b4a;    /* medium brown */
+  --kw-accent: #a47148;   /* accent brown */
+  --kw-border: #d8c3a5;   /* border beige */
+  --kw-shadow: 0 8px 20px rgba(62, 47, 35, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--kw-bg);
+  color: var(--kw-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.popup-root {
+  padding: 12px;
+  min-width: 360px;
+  max-width: 420px;
+}
+
+.popup-card {
+  background: var(--kw-panel);
+  border: 1px solid var(--kw-border);
+  border-radius: 12px;
+  box-shadow: var(--kw-shadow);
+  overflow: hidden;
+}
+
+.popup-header {
+  padding: 10px 12px;
+  background: var(--kw-bg);
+  border-bottom: 1px solid var(--kw-border);
+}
+
+.popup-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.popup-body {
+  padding: 12px;
+}
+
+.popup-muted {
+  color: var(--kw-muted);
+  margin: 6px 0;
+}
+
+.popup-pre {
+  white-space: pre-wrap;
+  background: #fffaf3;
+  border: 1px solid var(--kw-border);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Shared widget styles (matching content.js) */
+.kw-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.kw-metric {
+  background: #fffaf3;
+  border: 1px solid var(--kw-border);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.kw-label {
+  font-size: 12px;
+  color: var(--kw-muted);
+  margin-bottom: 2px;
+}
+
+.kw-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kw-text);
+}
+
+.kw-progress {
+  height: 8px;
+  background: #efe4d4;
+  border: 1px solid var(--kw-border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.kw-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--kw-accent), #8d5a3b);
+  width: 0%;
+  transition: width 300ms ease;
+}
+
+.kw-targets {
+  display: grid;
+  gap: 8px;
+}
+
+.kw-target {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffaf3;
+  border: 1px solid var(--kw-border);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.kw-target-label {
+  font-weight: 600;
+  color: var(--kw-text);
+}
+
+.kw-time {
+  color: var(--kw-accent);
+  font-weight: 700;
+}
